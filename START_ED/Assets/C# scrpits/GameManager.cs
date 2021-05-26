@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,8 +15,7 @@ public class GameManager : MonoBehaviour
     // 레벨
     static private int Serpin_level = 1;
     // 세르핀 총량
-    [SerializeField]
-    private double Serpin_All;
+    static private double Serpin_All;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,11 @@ public class GameManager : MonoBehaviour
         Serpin_Check();
     }
 
-    
+    static public double Get_Serpin_ALL() {
+
+        return Serpin_All;
+    }
+
     static public void Serpin_Plus() {
        Serpin++;
     }
