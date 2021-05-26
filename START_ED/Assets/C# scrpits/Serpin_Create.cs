@@ -27,8 +27,9 @@ public class Serpin_Create : MonoBehaviour
     }
 
     private void DeleteSerpin() {
-
-        Destroy(obj_parent.transform.GetChild(1).gameObject, Serpin_Delete);
+        if (obj_parent.transform.childCount != 1)  {
+            Destroy(obj_parent.transform.GetChild(1).gameObject, Serpin_Delete);
+        }
      }
 
     /// <summary>
@@ -44,7 +45,7 @@ public class Serpin_Create : MonoBehaviour
                 float randomX = Random.Range(-2.5f, 2.5f);
                 float randomY = Random.Range(0f, 3.5f);
 
-                GameObject my_obj = Instantiate(obj, new Vector3(randomX, randomY, 0f), Quaternion.identity);
+                GameObject my_obj = Instantiate(obj, new Vector2(randomX, randomY), Quaternion.identity);
                 my_obj.transform.parent = obj_parent.transform;
             }
                 yield return new WaitForSeconds(Serpin_speed);

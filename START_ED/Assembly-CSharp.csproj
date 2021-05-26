@@ -64,7 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\C# scrpits\NewBehaviourScript.cs" />
+    <Compile Include="Assets\C# scrpits\GameManager.cs" />
     <Compile Include="Assets\C# scrpits\Serpin_Create.cs" />
     <Compile Include="Assets\C# scrpits\forSerpin.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class forSerpin : MonoBehaviour
 {
+    GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class forSerpin : MonoBehaviour
 
     private void OnMouseDown() {
 
+        GameManager.Serpin_Plus();
         Destroy(this.gameObject);
     }
 }
