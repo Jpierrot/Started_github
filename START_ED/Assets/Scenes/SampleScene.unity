@@ -1588,6 +1588,7 @@ MonoBehaviour:
   MIDDLE_layout: {fileID: 180037335}
   Trait_MIDDLE_layout: {fileID: 1517479851}
   serpins: {fileID: 277103084}
+  Serpin_text: {fileID: 300814535}
 --- !u!114 &821610090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3288,6 +3289,7 @@ MonoBehaviour:
   MIDDLE_layout: {fileID: 0}
   Trait_MIDDLE_layout: {fileID: 0}
   serpins: {fileID: 0}
+  Serpin_text: {fileID: 0}
 --- !u!114 &1529051935
 MonoBehaviour:
   m_ObjectHideFlags: 0

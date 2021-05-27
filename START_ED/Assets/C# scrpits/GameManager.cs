@@ -15,13 +15,15 @@ public class GameManager : MonoBehaviour
     // 개수
     static private int Serpin;
     // 생성량
-    private double Serpin_create = 10;
+    static private double Serpin_create = 10;
     // 배수
-    private float Serpin_multiple = 1;
+    static private float Serpin_multiple = 1;
     // 레벨
     static private int Serpin_level = 1;
     // 세르핀 총량
     static private double Serpin_All;
+
+    static private double serpin_volume;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Serpin_Check();
         Serpin_Level_text.text = "세르핀 레벨 : " + Serpin_level.ToString() + " " + Serpin_create.ToString();
     }
 
@@ -44,18 +45,15 @@ public class GameManager : MonoBehaviour
     }
 
     static public void Serpin_Plus() {
-       Serpin++;
+        Serpin++;
+        serpin_volume = Serpin_create * Serpin_multiple;
+        Serpin_All += serpin_volume;
     }
 
     private void Serpin_LevelUp() {
 
         Serpin_create += (Serpin_create * 0.05) + 10;
         Serpin_level++;
-    }
-    
-    private void Serpin_Check() {
-        // 세르핀 총량 == 생성량 * 배수 * 세르핀 수
-        Serpin_All = Serpin_create * Serpin_multiple * Serpin;
     }
 
 }
