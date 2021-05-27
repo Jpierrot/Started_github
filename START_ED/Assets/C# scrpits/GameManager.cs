@@ -6,6 +6,12 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+   public void CheckButtonClick_serpin_levelup() {
+        Serpin_LevelUp();
+    }
+
+    public Text Serpin_Level_text;
     // 개수
     static private int Serpin;
     // 생성량
@@ -23,10 +29,13 @@ public class GameManager : MonoBehaviour
         
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
         Serpin_Check();
+        Serpin_Level_text.text = "세르핀 레벨 : " + Serpin_level.ToString() + " " + Serpin_create.ToString();
     }
 
     static public double Get_Serpin_ALL() {
