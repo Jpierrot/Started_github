@@ -1478,7 +1478,6 @@ GameObject:
   - component: {fileID: 821610085}
   - component: {fileID: 821610090}
   - component: {fileID: 821610089}
-  - component: {fileID: 821610091}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1607,19 +1606,6 @@ MonoBehaviour:
   - {fileID: 49472745}
   - {fileID: 1196359032}
   Check_Button: []
---- !u!114 &821610091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821610084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aee0ed711da3b5448752352b9ed61e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Serpin_text: {fileID: 300814535}
 --- !u!1 &822474462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,6 +2891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Serpin_Level_text: {fileID: 8282314525518283344}
+  Serpin_text: {fileID: 300814535}
 --- !u!4 &1305747435
 Transform:
   m_ObjectHideFlags: 0
