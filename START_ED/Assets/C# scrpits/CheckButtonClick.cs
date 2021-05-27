@@ -13,6 +13,7 @@ public class CheckButtonClick : MonoBehaviour
 
     private Text[] Trait_Text = new Text[9];
 
+    [SerializeField]
     private Button[] Check_Button;
 
     int ButtonCount=0;
