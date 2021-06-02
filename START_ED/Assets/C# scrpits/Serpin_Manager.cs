@@ -18,10 +18,10 @@ public class Serpin_Manager : MonoBehaviour
     // 개수
     static private int Serpin;
     // 세르핀 생성량
-    static private double Serpin_create = 10;
+    static private double Serpin_create = 10d;
 
     // 세르핀 생성량 표기시
-    private double Serpin_create_TEXT;
+    private double Serpin_create_TEMP = 0d;
     // 세르핀 값 알파벳으로 치환
     private char serpin_alphabet = 'A';
 
@@ -42,58 +42,58 @@ public class Serpin_Manager : MonoBehaviour
     /// </summary>
     static private double serpin_volume;
 
+    private bool serpin_checked = false;
+
+    private int serpin_alphabet_count = 0;
+
     private char serpin_alphabet_for_text = 'A';
 
     private void Start() {
-        Serpin_create_TEXT = Serpin_create;
+        Serpin_create_TEMP = Serpin_create;
     }
-    bool serpinChecked = false;
+
     //Update is called once per frame
-    void Update() {
+    private void Update() {
 
         Serpin_Check();
-        if (!serpinChecked) StartCoroutine(meow());
-        IEnumerator meow() {
-            set_Serpin_create();
-            yield break;
-        }
-
-        /*StartCoroutine(meow());
-        IEnumerator meow(){
-            yield return StartCoroutine(delay_1());
-        }*/
     }
 
     public void Serpin_Check() {
-        //set_Serpin_create();
-        serpinChecked = false;
-        Serpin_Level_text.text = "세르핀 레벨 : " + Serpin_level.ToString() + " " + Serpin_create_TEXT.ToString() + serpin_alphabet;
+
+        set_Serpin_create();
+        Serpin_Level_text.text = "세르핀 레벨 : " + Serpin_level.ToString() + " " + Serpin_create_TEMP.ToString() + serpin_alphabet;
         Serpin_text.text = "Serpin : " + Serpin_ALL_TEXT.ToString() + serpin_alphabet_for_text;
     }
 
     private void set_Serpin_create() {
-
-        Serpin_create_TEXT = Serpin_create; // TEMP로 정정하자 씹 대머리련아
-
-        int i = (int)serpin_alphabet;
+        
         // 알파벳 숫자로 저장
-
+        int i = (int)serpin_alphabet;
+       
         serpin_alphabet = plus_Alphabet(i);
-        // 
     }
     
     private char plus_Alphabet(int alphabet) {
 
-        if (Serpin_create_TEXT % 1000d < 1000d) {
+        if (Serpin_create_TEMP / 1000d >= 1d) {
 
-            Serpin_create_TEXT /= 1000d;
+            Serpin_create_TEMP /= 1000d;
+            serpin_alphabet_count++;
+       
+            Debug.Log("1000으로 다시 나누기");
+            
+            if (serpin_checked) {
+                alphabet += serpin_alphabet_count;
+                serpin_checked = false;
+            }
             Debug.Log("알파벳 증가");
-            serpinChecked = false;
-            return plus_Alphabet(alphabet++);
+            return plus_Alphabet(alphabet);
         }
-        else
-            serpinChecked = true; 
+        else {
+            serpin_alphabet_count = 0;
+            serpin_checked = true;
             return (char)alphabet;
+        }
 
     }
 
@@ -109,19 +109,9 @@ public class Serpin_Manager : MonoBehaviour
     }
 
     private void Serpin_LevelUp() {
-
+        Serpin_create_TEMP = Serpin_create;
         Serpin_create += (Serpin_create * 0.05) + 10;
         Serpin_level++;
-    }
-
-   
-
-
-
-
-    IEnumerator delay_1() {
-
-        yield return new WaitForSeconds(10f);
     }
 
 }
