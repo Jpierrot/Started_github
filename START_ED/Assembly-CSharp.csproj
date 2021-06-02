@@ -66,8 +66,8 @@
   <ItemGroup>
     <Compile Include="Assets\C# scrpits\CheckButtonClick.cs" />
     <Compile Include="Assets\C# scrpits\EmployButtonClick.cs" />
-    <Compile Include="Assets\C# scrpits\GameManager.cs" />
     <Compile Include="Assets\C# scrpits\Serpin_Create.cs" />
+    <Compile Include="Assets\C# scrpits\Serpin_Manager.cs" />
     <Compile Include="Assets\C# scrpits\forSerpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

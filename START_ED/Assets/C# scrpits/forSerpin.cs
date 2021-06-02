@@ -19,7 +19,7 @@ public class forSerpin : MonoBehaviour
 
     private void OnMouseDown() {
 
-        GameManager.Serpin_Plus();
+        Serpin_Manager.Serpin_Plus();
         Destroy(this.gameObject);
     }
 }

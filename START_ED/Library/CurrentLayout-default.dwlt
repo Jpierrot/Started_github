@@ -114,10 +114,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 942
-  m_MinSize: {x: 909, y: 442}
-  m_MaxSize: {x: 22004, y: 10021}
+  m_MinSize: {x: 908, y: 442}
+  m_MaxSize: {x: 22003, y: 10021}
   vertical: 0
-  controlID: 141
+  controlID: 106
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -336,7 +336,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -349,18 +349,18 @@ MonoBehaviour:
       y: 21
       width: 404
       height: 417
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 202, y: 208.5}
+    m_Scale: {x: 1.1227, y: 1.1227}
+    m_Translation: {x: 202, y: 231.26083}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -202
-      y: -208.5
-      width: 404
-      height: 417
+      x: -179.9234
+      y: -205.98631
+      width: 359.8468
+      height: 371.42603
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 404, y: 438}
@@ -405,9 +405,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.15215676, y: -0.2508, z: 387.5508}
+    m_Target: {x: -0.07212473, y: -1.3489434, z: 67.28467}
     speed: 2
-    m_Value: {x: 0.00052924454, y: -0.30188668, z: 371.3233}
+    m_Value: {x: -0.07212473, y: -1.3489434, z: 67.28467}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -457,9 +457,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.3607883
+    m_Target: 3.3087122
     speed: 2
-    m_Value: 5.129941
+    m_Value: 3.46462
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -603,23 +603,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 64fbffff
+      m_SelectedIDs: e2390000
+      m_LastClickedID: 14818
+      m_ExpandedIDs: 64fbffff2a3a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: GameManager
+        m_OriginalName: GameManager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 14956
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -668,19 +668,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/C# scrpits
+    - Assets/Resources
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/C# scrpits
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\xoqls\Desktop\Started\Started_github\START_ED
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a23b0000
-    m_LastClickedID: 15266
+    m_SelectedIDs: a63b0000
+    m_LastClickedID: 15270
     m_ExpandedIDs: 000000009e3b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
