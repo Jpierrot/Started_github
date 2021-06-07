@@ -51,52 +51,39 @@ public class Serpin_Manager : MonoBehaviour
     private void Start() {
         Serpin_create_TEMP = Serpin_create;
     }
+    public double Serpin_create_TEXT;
 
-    //Update is called once per frame
     private void Update() {
-
         Serpin_Check();
     }
 
-    public void Serpin_Check() {
-
+    private void Serpin_Check() {
         set_Serpin_create();
-        Serpin_Level_text.text = "세르핀 레벨 : " + Serpin_level.ToString() + " " + Serpin_create_TEMP.ToString() + serpin_alphabet;
-        Serpin_text.text = "Serpin : " + Serpin_ALL_TEXT.ToString() + serpin_alphabet_for_text;
+        var alphabet = serpin_alphabet == '-' ? "" : serpin_alphabet.ToString();
+        Debug.Log($"{Serpin_create_TEXT} {alphabet}");
     }
 
     private void set_Serpin_create() {
-        
-        // 알파벳 숫자로 저장
-        int i = (int)serpin_alphabet;
-       
-        serpin_alphabet = plus_Alphabet(i);
+        serpin_alphabet = '-';
+        Serpin_create_TEXT = Serpin_create;
+
+        plus_Alphabet();
     }
-    
-    private char plus_Alphabet(int alphabet) {
 
-        if (Serpin_create_TEMP / 1000d >= 1d) {
+    private void plus_Alphabet() {
+        if (Serpin_create_TEXT >= 1000d) {
+            Serpin_create_TEXT /= 1000d;
 
-            Serpin_create_TEMP /= 1000d;
-            serpin_alphabet_count++;
-       
-            Debug.Log("1000으로 다시 나누기");
-            
-            if (serpin_checked) {
-                alphabet += serpin_alphabet_count;
-                serpin_checked = false;
+            if (serpin_alphabet == '-')
+                serpin_alphabet = 'A';
+            else {
+                var i = (int)serpin_alphabet;
+                serpin_alphabet = (char)++i;
             }
-            Debug.Log("알파벳 증가");
-            return plus_Alphabet(alphabet);
-        }
-        else {
-            serpin_alphabet_count = 0;
-            serpin_checked = true;
-            return (char)alphabet;
-        }
 
+            plus_Alphabet();
+        }
     }
-
     static public double Get_Serpin_ALL() {
         return Serpin_All;
     }
