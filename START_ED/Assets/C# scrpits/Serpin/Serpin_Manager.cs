@@ -20,7 +20,7 @@ public class Serpin_Manager : MonoBehaviour
     // 개수
     static private int Serpin;
     // 세르핀 생성량
-    static private double Serpin_create = 10d;
+    static private double Serpin_create = 100d;
 
     // 세르핀 생성량 표기시
     private double Serpin_create_TEMP = 0d;
@@ -29,8 +29,14 @@ public class Serpin_Manager : MonoBehaviour
 
     private char serpin_alphabet_ALL = 'A';
 
+    private char serpin_purchase = 'A';
+
     // 배수
-    static private float Serpin_multiple = 1;
+    
+    /// <summary>
+    /// 레벨당 세르핀 배수
+    /// </summary>
+    static private float Serpin_multiple_level = 1;
     // 레벨
     static private int Serpin_level = 1;
     // 세르핀 총량
@@ -41,18 +47,30 @@ public class Serpin_Manager : MonoBehaviour
     /// </summary>
     private double Serpin_ALL_TEXT;
 
+    private double Serpin_create_TEXT;
+
+    private double Serpin_purchase_Text_double;
+
     /// <summary>
     ///  세르핀 현재 값
     /// </summary>
     static private double serpin_volume;
 
-    public double Serpin_create_TEXT;
-     
+    /// <summary>
+    /// 세르핀 레벨업 비용
+    /// </summary>
+    private double volume = 50;
+
+    private void Start() {
+        Serpin_level_purchase.text = "50";
+    }
+
     private void Update() {
         Serpin_Check();
     }
 
     private void Serpin_Check() {
+        
         set_Serpin_create();
         set_Serpin_create_ALL();
         var alphabet = serpin_alphabet == '-' ? "" : serpin_alphabet.ToString();
@@ -62,7 +80,7 @@ public class Serpin_Manager : MonoBehaviour
 
     private void set_Serpin_create() {
         serpin_alphabet = '-';
-        Serpin_create_TEXT = Serpin_create;
+        Serpin_create_TEXT = serpin_volume;
 
         plus_Alphabet();
     }
@@ -72,6 +90,28 @@ public class Serpin_Manager : MonoBehaviour
         Serpin_ALL_TEXT = Serpin_All;
 
         plus_ALL_Alphabet();
+    }
+
+    private void set_Serpin_alphabet(ref char alphabet, ref double num_text, ref double num) {
+        alphabet = ' ';
+        num_text = num;
+
+        plus_all_Alphabet(ref alphabet, ref  num_text, ref num);
+    }
+
+    private void plus_all_Alphabet(ref char alphabet, ref double num_text, ref double num) {
+        if (num_text >= 1000d) {
+            num_text /= 1000d;
+
+            if (alphabet == ' ')
+                alphabet = 'A';
+            else {
+                var i = (int)alphabet;
+                alphabet = (char)++i;
+            }
+
+            plus_all_Alphabet(ref alphabet, ref num_text, ref num);
+        }
     }
 
     private void plus_Alphabet() {
@@ -110,7 +150,7 @@ public class Serpin_Manager : MonoBehaviour
 
     static public void Serpin_Plus() {
         Serpin++;
-        serpin_volume = Serpin_create * Serpin_multiple;
+        serpin_volume = Serpin_create * Serpin_multiple_level;
         Serpin_All += serpin_volume;
     }
 
@@ -122,15 +162,30 @@ public class Serpin_Manager : MonoBehaviour
     }
 
     private void Serpin_LevelUp() {
-        double volume = Serpin_create * 5;
-        if (Serpin_All > volume) {
+        
+        if (Serpin_All >= volume) {
+            
             Serpin_create_TEMP = Serpin_create;
-            Serpin_create += (Serpin_create * 0.05) + 10;
+            Serpin_create += (Serpin_create * 0.05) + 5;
             Serpin_level++;
+
             purchase(volume);
             Debug.Log("구매 완료");
-            Serpin_level_purchase.text = (Serpin_create * 5).ToString();
+            
+            
+            volume += (volume * 0.3);
+            //구매량 재화 단위 맞추기
+            set_Serpin_alphabet(ref serpin_purchase, ref Serpin_purchase_Text_double,  ref volume);
+            Serpin_level_purchase.text = string.Format("{0:0.#}", Serpin_purchase_Text_double) + serpin_purchase;
+
         }
+        
+
+        if (Serpin_level % 10 == 0) {
+            Serpin_multiple_level *= 2f;
+        }
+
+        serpin_volume = Serpin_create * Serpin_multiple_level;
     }
 
 }

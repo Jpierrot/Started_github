@@ -68,6 +68,7 @@
     <Compile Include="Assets\C# scrpits\Serpin\Serpin_Create.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\Serpin_Manager.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\forSerpin.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\Bottom_layout_button.cs" />
     <Compile Include="Assets\C# scrpits\UI\Button\CheckButtonClick.cs" />
     <Compile Include="Assets\C# scrpits\UI\Button\EmployButtonClick.cs" />
     <Compile Include="Assets\C# scrpits\UI\Button\ListButton.cs" />
