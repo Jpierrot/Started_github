@@ -15,6 +15,8 @@ public class Serpin_Manager : MonoBehaviour
 
     public Text Serpin_text;
 
+    public Text Serpin_level_purchase;
+
     // 개수
     static private int Serpin;
     // 세르핀 생성량
@@ -112,10 +114,23 @@ public class Serpin_Manager : MonoBehaviour
         Serpin_All += serpin_volume;
     }
 
+    static public void purchase(double volume) {
+        if (Serpin_All >= volume) {
+            Serpin_All -= volume;
+            Debug.Log("차감됨");
+        }
+    }
+
     private void Serpin_LevelUp() {
-        Serpin_create_TEMP = Serpin_create;
-        Serpin_create += (Serpin_create * 0.05) + 10;
-        Serpin_level++;
+        double volume = Serpin_create * 5;
+        if (Serpin_All > volume) {
+            Serpin_create_TEMP = Serpin_create;
+            Serpin_create += (Serpin_create * 0.05) + 10;
+            Serpin_level++;
+            purchase(volume);
+            Debug.Log("구매 완료");
+            Serpin_level_purchase.text = (Serpin_create * 5).ToString();
+        }
     }
 
 }

@@ -64,16 +64,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\C# scrpits\CheckButtonClick.cs" />
-    <Compile Include="Assets\C# scrpits\EmployButtonClick.cs" />
     <Compile Include="Assets\C# scrpits\GameManager.cs" />
-    <Compile Include="Assets\C# scrpits\ListButton.cs" />
-    <Compile Include="Assets\C# scrpits\ListButtonClick.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\Serpin_Create.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\Serpin_Manager.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\forSerpin.cs" />
-    <Compile Include="Assets\C# scrpits\SetButton.cs" />
-    <Compile Include="Assets\C# scrpits\SetButtonClick.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\CheckButtonClick.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\EmployButtonClick.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\ListButton.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\ListButtonClick.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\SetButton.cs" />
+    <Compile Include="Assets\C# scrpits\UI\Button\SetButtonClick.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
