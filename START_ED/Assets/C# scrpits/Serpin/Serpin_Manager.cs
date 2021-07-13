@@ -11,14 +11,24 @@ public class Serpin_Manager : MonoBehaviour
         Serpin_LevelUp();
     }
 
+    /// <summary>
+    /// 세르핀 레벨
+    /// </summary>
     public Text Serpin_Level_text;
 
-    public Text Serpin_text;
+    /// <summary>
+    /// 세르핀 생성량
+    /// </summary>
+    public Text Serpin_create_text;
 
+    /// <summary>
+    /// 세르핀 레벨업 비용
+    /// </summary>
     public Text Serpin_level_purchase;
-
-    // 개수
+     
+    // 획득 개수
     static private int Serpin;
+
     // 세르핀 생성량
     static private double Serpin_create = 100d;
 
@@ -75,7 +85,7 @@ public class Serpin_Manager : MonoBehaviour
         set_Serpin_create_ALL();
         var alphabet = serpin_alphabet == '-' ? "" : serpin_alphabet.ToString();
         Serpin_Level_text.text = "세르핀 레벨  : " + $"{Serpin_level} \n생산량 : " + string.Format("{0:0.#}", Serpin_create_TEXT) + alphabet;
-        Serpin_text.text = $"세르핀 량 : " + string.Format("{0:0.#}", Serpin_ALL_TEXT) + serpin_alphabet_ALL;
+        Serpin_create_text.text = $"세르핀 량 : " + string.Format("{0:0.#}", Serpin_ALL_TEXT) + serpin_alphabet_ALL;
     }
 
     private void set_Serpin_create() {
@@ -149,7 +159,7 @@ public class Serpin_Manager : MonoBehaviour
     }
 
     static public void Serpin_Plus() {
-        Serpin++;
+        
         serpin_volume = Serpin_create * Serpin_multiple_level;
         Serpin_All += serpin_volume;
     }
@@ -159,6 +169,8 @@ public class Serpin_Manager : MonoBehaviour
             Serpin_All -= volume;
             Debug.Log("차감됨");
         }
+        else
+            Debug.Log("값이 부족");
     }
 
     private void Serpin_LevelUp() {
@@ -178,13 +190,12 @@ public class Serpin_Manager : MonoBehaviour
             set_Serpin_alphabet(ref serpin_purchase, ref Serpin_purchase_Text_double,  ref volume);
             Serpin_level_purchase.text = string.Format("{0:0.#}", Serpin_purchase_Text_double) + serpin_purchase;
 
-        }
-        
+            if (Serpin_level % 10 == 0)
+            {
+                Serpin_multiple_level *= 2f;
+            }
 
-        if (Serpin_level % 10 == 0) {
-            Serpin_multiple_level *= 2f;
         }
-
         serpin_volume = Serpin_create * Serpin_multiple_level;
     }
 

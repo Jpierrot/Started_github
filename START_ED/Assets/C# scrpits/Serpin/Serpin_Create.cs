@@ -18,7 +18,7 @@ public class Serpin_Create : MonoBehaviour
 
     [Obsolete]
     private void Start() {
-        CreateSerpin();
+        StartCoroutine(waitSerpin());
     }
     // Update is called once per frame
     private void FixedUpdate() {
@@ -52,8 +52,7 @@ public class Serpin_Create : MonoBehaviour
         }
     }
 
-    private void CreateSerpin() {
 
-        StartCoroutine(waitSerpin());
-    }
+
+    
 }

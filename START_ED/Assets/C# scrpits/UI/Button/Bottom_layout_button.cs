@@ -9,27 +9,17 @@ public class Bottom_layout_button : MonoBehaviour
     private GameObject MIDDLE_layout;
     [SerializeField]
     private GameObject Shop_MIDDLE_layout;
-    [SerializeField]
-    private Text change_text;
-    private bool isShop = false;
     private void Start()
     {
     }
     public void shopButtonOnClick()
     {
-        if (!isShop)
-        {
-            MIDDLE_layout.SetActive(false);
-            Shop_MIDDLE_layout.SetActive(true);
-            change_text.text = "홈으로";
-            isShop = true;
-        }
-        else if (isShop)
-        {
-            Shop_MIDDLE_layout.SetActive(false);
-            MIDDLE_layout.SetActive(true);
-            change_text.text = "상점";
-            isShop = false;
-        }
+        Shop_MIDDLE_layout.SetActive(true);
+        MIDDLE_layout.SetActive(false);
+    }
+    public void researcherButtonOnClick()
+    {
+        Shop_MIDDLE_layout.SetActive(false);
+        MIDDLE_layout.SetActive(true);
     }
 }
