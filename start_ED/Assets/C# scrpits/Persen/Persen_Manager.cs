@@ -57,7 +57,7 @@ public class Persen_Manager : MonoBehaviour
     static private double persen_All = 0;
 
     /// <summary>
-    /// 페르센 레벨업 비용
+    /// 페르센 개당 가격
     /// </summary>
     static private double persen_volume = 0;
 
@@ -72,12 +72,22 @@ public class Persen_Manager : MonoBehaviour
     private double persen_create_TEXT;
 
     /// <summary>
-    /// 페르센 구입 비용
+    /// 페르센 레벨업 비용
+    /// </summary>
+    private double persen_levelup_price = 100d;
+
+    /// <summary>
+    /// 페르센 구매 비용
     /// </summary>
     private double persen_purchase;
 
     /// <summary>
-    /// 페르센 구입 단위
+    /// 페르센 구매 비용 표기용
+    /// </summary>
+    private double persen_purchase_text_with;
+
+    /// <summary>
+    /// 페르센 구매 단위
     /// </summary>
     private char persen_purchase_alphabet = 'A';
 
@@ -96,10 +106,11 @@ public class Persen_Manager : MonoBehaviour
     void Update()
     {
         Set_C_Persen_text();
+
     }
 
     private void Set_C_Persen_text() {
-        set_Persen_alphabet(ref persen_alphabet, ref persen_create_TEXT, ref persen_create);
+        set_Persen_alphabet(ref persen_alphabet, ref persen_create_TEXT, ref persen_volume);
         set_Persen_alphabet(ref persen_all_alphabet, ref persen_ALL_TEXT, ref persen_All);
         
         var alphabet = persen_alphabet == '-' ? "" : persen_alphabet.ToString();
@@ -139,10 +150,10 @@ public class Persen_Manager : MonoBehaviour
     private void Persen_LevelUp()
     {
 
-        if (persen_All >= persen_volume)
+        if (persen_All >= persen_levelup_price)
         {
-            purchase(persen_volume);
-           persen_create_TEXT = persen_create;
+            purchase(persen_levelup_price);
+            persen_create_TEXT = persen_create;
             persen_create += (persen_create_TEXT * 0.05) + 5;
             persen_level++;
 
@@ -151,11 +162,13 @@ public class Persen_Manager : MonoBehaviour
                 persen_multiple_level *= 2f;
             }
 
-            set_Persen_alphabet(ref persen_purchase_alphabet, ref persen_purchase, ref persen_volume);
-            Persen_purchase_text.text = string.Format("{0:0.#}", persen_purchase) + persen_purchase_alphabet;
+            persen_levelup_price += (persen_levelup_price * 0.3);
 
+            set_Persen_alphabet(ref persen_purchase_alphabet, ref persen_purchase_text_with, ref persen_levelup_price);
+            Persen_purchase_text.text = string.Format("{0:0.#}", persen_purchase_text_with) + persen_purchase_alphabet;
 
         }
+
         persen_volume = persen_create * persen_multiple_level;
     }
 
@@ -172,6 +185,13 @@ public class Persen_Manager : MonoBehaviour
     {
        persen_volume = persen_create * persen_multiple_level;
        persen_All += persen_volume;
+       
+    }
+
+    static public void Persen_Researcher(double persen_all)
+    {
+        persen_All += persen_all;
+
     }
 
     IEnumerator Create_Persen()

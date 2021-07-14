@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\C# scrpits\GameManager.cs" />
     <Compile Include="Assets\C# scrpits\Persen\Persen_Manager.cs" />
+    <Compile Include="Assets\C# scrpits\Researcher\Researcher_Manager.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\Serpin_Create.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\Serpin_Manager.cs" />
     <Compile Include="Assets\C# scrpits\Serpin\forSerpin.cs" />

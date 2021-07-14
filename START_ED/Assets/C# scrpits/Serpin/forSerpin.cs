@@ -8,6 +8,7 @@ public class forSerpin : MonoBehaviour
     public float _fadeTime = 5f;
     private float ildan = 0f;
     private bool fade_out_start = false;
+    private bool just_one_touch = true;
 
     private void Start() {
           
@@ -30,10 +31,13 @@ public class forSerpin : MonoBehaviour
 
     }
     private void OnMouseDown() {
-        Serpin_Manager.Serpin_Plus();
-        Destroy(gameObject, 0.5f);
-        fade_out_start = true;
-        
+        if (just_one_touch)
+        {
+            Serpin_Manager.Serpin_Plus();
+            Destroy(gameObject, 0.5f);
+            fade_out_start = true;
+            just_one_touch = false;
+        }
     }
 
 
