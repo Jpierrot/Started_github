@@ -13,22 +13,27 @@ public class Re_A : MonoBehaviour
     /// <summary>
     /// 페르센 량
     /// </summary>
-    public static double persen_a;
+    public static double persen_a = Serpin_Manager.ChangeVolume_ALL(2, 'A');
 
     private int a_level;
 
     private double persen_a_text;
 
-    private double a_levelup_price;
-
-    private double a_purchase;
+    private double a_levelup_price = Serpin_Manager.ChangeVolume_ALL(4, 'A');
 
     private double a_purchase_with;
 
-    //a의 단위;
+    //a페르센 단위
     private char a_alphabet;
 
+    //레벨업 a의 단위;
+    private char a_level_alphabet;
+
+    [SerializeField]
     Text a_purchase_text;
+
+    [SerializeField]
+    Text a_persen_text;
 
     
 
@@ -45,6 +50,7 @@ public class Re_A : MonoBehaviour
 
     private void Update() {
         ResearcherA();
+        A_Persen_Setting();
     }
 
     private void ResearcherA() {
@@ -69,10 +75,19 @@ public class Re_A : MonoBehaviour
 
     }
 
-    private void Persen_LevelUp() {
+    private void A_Persen_Setting()
+    {
+        Persen_Manager.set_Persen_alphabet(ref a_alphabet, ref persen_a_text, ref persen_a);
+        a_persen_text.text = "A 레벨  : " + $"{a_level} \n생산량 : " + string.Format("{0:0.#}", persen_a_text) + a_alphabet;
+
+    }
+
+    [SerializeField]
+    public void Persen_LevelUp() {
 
         //구입할 수 있는 조건이 되면
-        if (Persen_Manager.persen_All >= a_levelup_price) {
+        if (Persen_Manager.persen_All >= a_levelup_price)
+        {
             //페르센을 지불
             Persen_Manager.purchase(a_levelup_price);
 
@@ -82,7 +97,8 @@ public class Re_A : MonoBehaviour
             a_level++;
 
             // 레벨이 10이면 2배 증가
-            if (a_level % 10 == 0) {
+            if (a_level % 10 == 0)
+            {
                 persen_a *= 2f;
             }
 
@@ -90,18 +106,16 @@ public class Re_A : MonoBehaviour
             a_levelup_price += (a_levelup_price * 0.3);
 
             //구매에 쓰이는 값들 알파벳 정렬
-           Persen_Manager.set_Persen_alphabet(ref a_alphabet, ref persen_purchase_text, ref a_levelup_price);
-            a_purchase_text.text = string.Format("{0:0.#}", persen_purchase_text_with) + persen_purchase_alphabet;
-
+            Persen_Manager.set_Persen_alphabet(ref a_level_alphabet, ref a_purchase_with, ref a_levelup_price);
+            a_purchase_text.text = string.Format("{0:0.#}", a_purchase_with) + a_level_alphabet;
         }
 
-  
     }
 
     IEnumerator Researcher_PersenA() {
-
-        Persen_Manager.Persen_Researcher(persen_a);
-        yield return new WaitForSeconds(persen_speed);
-
+        while (true) {
+            Persen_Manager.Persen_Researcher(persen_a);
+            yield return new WaitForSeconds(persen_speed);
+        }
     }
 }

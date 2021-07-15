@@ -217,6 +217,7 @@ public class Persen_Manager : MonoBehaviour
         while (true)
         {
             Persen_Plus();
+
             yield return new WaitForSeconds(persen_speed);
         }
         

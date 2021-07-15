@@ -34,12 +34,14 @@ public class Serpin_Manager : MonoBehaviour
 
     // 세르핀 생성량 표기시
     private double Serpin_create_TEMP = 0d;
+
     // 세르핀 값 알파벳으로 치환
     private char serpin_alphabet = 'A';
 
     private char serpin_alphabet_ALL = 'A';
 
     private char serpin_purchase = 'A';
+
 
 
     // 배수
@@ -85,7 +87,7 @@ public class Serpin_Manager : MonoBehaviour
         set_Serpin_create();
         set_Serpin_create_ALL();
         var alphabet = serpin_alphabet == '-' ? "" : serpin_alphabet.ToString();
-        Serpin_Level_text.text = "세르핀 레벨  : " + $"{Serpin_level} \n생산량 : " + string.Format("{0:0.#}", Serpin_create_TEXT) + alphabet;
+        Serpin_Level_text.text = "세르핀 레벨  : " + $"{Serpin_level} \n생산량 : " + string.Format("{0:0.#}", Serpin_create_TEXT) + alphabet; 
         Serpin_create_text.text = $"세르핀 량 : " + string.Format("{0:0.#}", Serpin_ALL_TEXT) + serpin_alphabet_ALL;
     }
 
