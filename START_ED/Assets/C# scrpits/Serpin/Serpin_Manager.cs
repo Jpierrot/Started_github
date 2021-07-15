@@ -41,6 +41,7 @@ public class Serpin_Manager : MonoBehaviour
 
     private char serpin_purchase = 'A';
 
+
     // 배수
     
     /// <summary>
@@ -197,6 +198,25 @@ public class Serpin_Manager : MonoBehaviour
 
         }
         serpin_volume = Serpin_create * Serpin_multiple_level;
+    }
+
+    /// <summary>
+    /// 세르핀 량과 알파벳을 넣으면 값으로 변환시켜줌;
+    /// </summary>
+    /// <param name="volume">값</param>
+    /// <param name="alphabet">넣을 값(Ex a, b, c)</param>
+    /// <returns>원래 값으로 변환된 값을 반환</returns>
+    static public double ChangeVolume_ALL(double volume,char alphabet)
+    {
+        int num=0;
+        var i = (int)alphabet;
+        
+        while (num!=i-64)
+        {
+            volume *= 1000;
+            num++;
+        }
+        return volume;
     }
 
 }

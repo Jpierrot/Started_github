@@ -44,7 +44,7 @@ public class Persen_Manager : MonoBehaviour
     /// <summary>
     /// 페르센 배수
     /// </summary>
-    static private float persen_multiple_level = 1;
+    static public float persen_multiple_level = 1;
 
     /// <summary>
     /// 페르센 레벨
@@ -54,7 +54,7 @@ public class Persen_Manager : MonoBehaviour
     /// <summary>
     /// 페르센 총량
     /// </summary>
-    static private double persen_All = 0;
+    static public double persen_All = 0;
 
     /// <summary>
     /// 페르센 개당 가격
@@ -119,7 +119,7 @@ public class Persen_Manager : MonoBehaviour
         Persen_text.text = $"페르센 량 : " + string.Format("{0:0.#}", persen_ALL_TEXT) + persen_all_alphabet;
     }
 
-    private void set_Persen_alphabet(ref char alphabet, ref double num_text, ref double num)
+    static public void set_Persen_alphabet(ref char alphabet, ref double num_text, ref double num)
     {
         alphabet = ' ';
         num_text = num;
@@ -127,7 +127,7 @@ public class Persen_Manager : MonoBehaviour
         plus_all_Alphabet(ref alphabet, ref num_text, ref num);
     }
 
-    private void plus_all_Alphabet(ref char alphabet, ref double num_text, ref double num)
+    static public void plus_all_Alphabet(ref char alphabet, ref double num_text, ref double num)
     {
         if (num_text >= 1000d)
         {
@@ -150,20 +150,27 @@ public class Persen_Manager : MonoBehaviour
     private void Persen_LevelUp()
     {
 
+        //구입할 수 있는 조건이 되면
         if (persen_All >= persen_levelup_price)
         {
+            //페르센을 지불
             purchase(persen_levelup_price);
+
+            //페르센 생산량을 올려줌
             persen_create_TEXT = persen_create;
             persen_create += (persen_create_TEXT * 0.05) + 5;
             persen_level++;
 
+            // 레벨이 10이면 2배 증가
             if (persen_level % 10 == 0)
             {
                 persen_multiple_level *= 2f;
             }
 
+            //
             persen_levelup_price += (persen_levelup_price * 0.3);
 
+            //구매에 쓰이는 값들 알파벳 정렬
             set_Persen_alphabet(ref persen_purchase_alphabet, ref persen_purchase_text_with, ref persen_levelup_price);
             Persen_purchase_text.text = string.Format("{0:0.#}", persen_purchase_text_with) + persen_purchase_alphabet;
 
@@ -181,6 +188,9 @@ public class Persen_Manager : MonoBehaviour
             Debug.Log("값이 부족함");
     }
 
+    /// <summary>
+    /// 페르센 추가되는 양을 정의
+    /// </summary>
     static public void Persen_Plus()
     {
        persen_volume = persen_create * persen_multiple_level;
@@ -188,12 +198,20 @@ public class Persen_Manager : MonoBehaviour
        
     }
 
+    /// <summary>
+    /// 연구원들 페르센 값 넣으면 페르센 전체 값에 넣어줌
+    /// </summary>
+    /// <param name="persen_all"></param>
     static public void Persen_Researcher(double persen_all)
     {
         persen_All += persen_all;
 
     }
 
+    /// <summary>
+    /// 초마다 페르센을 받아옴
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Create_Persen()
     {
         while (true)
