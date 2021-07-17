@@ -23,8 +23,7 @@ public class EmployButtonClick : MonoBehaviour
     private Text Serpin_text;
     [SerializeField]
     private GameObject Trait_text_boxes;
-    [SerializeField]
-    private Text[] Trait_text;
+    public Text[] Trait_text;
 
     private void Start()
     {
@@ -43,6 +42,7 @@ public class EmployButtonClick : MonoBehaviour
 
     public void EmployButton1OnClick() {
         CheckButtonClick buttonClick = GameObject.Find("Canvas").GetComponent<CheckButtonClick>();
+        
         if (buttonClick.ButtonCount >= 3)
         {
             Employ_TOP_layout.SetActive(false);
@@ -50,9 +50,22 @@ public class EmployButtonClick : MonoBehaviour
             Trait_MIDDLE_layout.SetActive(false);
             InterView_MIDDLE_layout.SetActive(true);
 
+            for(int i = 0; i < 9; i++)
+            {
+                buttonClick.Check_Button[i].transform.GetChild(0).gameObject.SetActive(false);
+            }
+            
+
+            buttonClick.ButtonCount = 0;
+
+
             Trait_text[0].text = buttonClick.Trait_text[0].text;
             Trait_text[1].text = buttonClick.Trait_text[1].text;
             Trait_text[2].text = buttonClick.Trait_text[2].text;
+
+            buttonClick.Trait_text[0].text = "특성 1 : ";
+            buttonClick.Trait_text[1].text = "특성 2 : ";
+            buttonClick.Trait_text[2].text = "특성 3 : ";
         }
     }
 }

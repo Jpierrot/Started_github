@@ -8,14 +8,12 @@ public class CheckButtonClick : MonoBehaviour
     [SerializeField]
     private GameObject Content;
 
-    [SerializeField]
     public Text[] Trait_text = new Text[3];
 
     [SerializeField]
     private Text[] Trait_Button_Text = new Text[9];
 
-    [SerializeField]
-    private Button[] Check_Button;
+    public Button[] Check_Button;
 
     public int ButtonCount=0;
 
@@ -33,7 +31,6 @@ public class CheckButtonClick : MonoBehaviour
             {
                 ButtonCount++;
                 Check_Button[0].transform.GetChild(0).gameObject.SetActive(true);
-                Debug.Log(Trait_Button_Text[0].text);
                 switch (ButtonCount)
                 {
                     case 1: Trait_text[0].text += Trait_Button_Text[0].text;break;
