@@ -37,7 +37,6 @@ public class EmployButtonClick : MonoBehaviour
         MIDDLE_layout.SetActive(false);
         Trait_MIDDLE_layout.SetActive(true);
         serpins.transform.gameObject.SetActive(false);
-        Serpin_text.gameObject.SetActive(false);
     }
 
     public void EmployButton1OnClick() {

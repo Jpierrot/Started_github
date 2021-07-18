@@ -18,6 +18,9 @@ public class RedEmployButton : MonoBehaviour
     private Image[] researcherimage;
 
     [SerializeField]
+    private GameObject serpins;
+
+    [SerializeField]
     private int buttonClickCount = 0;
     // Start is called before the first frame update
     
@@ -27,6 +30,7 @@ public class RedEmployButton : MonoBehaviour
         interview_MiDDLE_Layout.SetActive(false);
         TOP_Layout.SetActive(true);
         MIDDLE_Layout.SetActive(true);
+        serpins.transform.gameObject.SetActive(true);
         DocumentButton documentButton = GameObject.Find("Canvas").GetComponent<DocumentButton>();
 
         if (buttonClickCount < 5)

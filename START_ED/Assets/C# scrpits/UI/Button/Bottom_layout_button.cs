@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Bottom_layout_button : MonoBehaviour
 {
     [SerializeField]
-    private GameObject MIDDLE_layout;
+    private GameObject MIDDLE_layout; //연구원 정보 창
     [SerializeField]
-    private GameObject Shop_MIDDLE_layout;
+    private GameObject Shop_MIDDLE_layout; //상점 창
     private void Start()
     {
     }
