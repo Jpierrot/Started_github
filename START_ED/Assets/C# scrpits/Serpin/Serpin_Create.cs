@@ -16,12 +16,23 @@ public class Serpin_Create : MonoBehaviour
     [SerializeField]
     private int Serpin_Delete;
 
+    /// <summary>
+    /// 코드가 꺼져있는지 검사
+    /// </summary>
+    static public bool serpin_check = false;
+
     [Obsolete]
     private void Start() {
         StartCoroutine(waitSerpin());
     }
     // Update is called once per frame
     private void FixedUpdate() {
+
+        if(serpin_check) {
+            StartCoroutine(waitSerpin());
+            serpin_check = false;
+        }
+
 
         DeleteSerpin();
     }
@@ -50,6 +61,7 @@ public class Serpin_Create : MonoBehaviour
                 GameObject my_obj = Instantiate(obj, new Vector2(randomX, randomY), Quaternion.identity);
                 my_obj.transform.parent = obj_parent.transform;
             }
+
             yield return new WaitForSeconds(Serpin_speed);
         }
     }

@@ -31,6 +31,7 @@ public class RedEmployButton : MonoBehaviour
         TOP_Layout.SetActive(true);
         MIDDLE_Layout.SetActive(true);
         serpins.transform.gameObject.SetActive(true);
+        Serpin_Create.serpin_check = true;
         DocumentButton documentButton = GameObject.Find("Canvas").GetComponent<DocumentButton>();
 
         if (buttonClickCount < 5)
