@@ -14,14 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - "Assets/Resources/_\uC81C\uBC1C1626652367.psb"
-    - "Assets/Resources/_\uC81C\uBC1C1626652367.psb.meta"
-    - "Assets/\u315C\u3150/_\uC81C\uBC1C1626652367.controller"
-    - "Assets/\u315C\u3150/_\uC81C\uBC1C1626652367.controller.meta"
-    - "Assets/\u315C\u3150/zero2.anim"
-    - "Assets/\u315C\u3150/zero2.anim.meta"
     - 
-    m_Values: 01010101010101
+    m_Values: 01
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

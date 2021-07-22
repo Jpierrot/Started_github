@@ -282,7 +282,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0, y: 0, z: 87.598}
+        value: {x: 0, y: 0, z: 84.826}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -308,7 +308,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.04585333, y: 7.880763, z: 0}
+        value: {x: -0.04592766, y: 7.7902827, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -326,7 +326,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 2
-        value: {x: -0.04585333, y: 7.880763, z: 0}
+        value: {x: -0.04594117, y: 7.775204, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -544,6 +544,13 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 1282473481
+      attribute: 4
+      script: {fileID: 0}
+      typeID: 4
+      customType: 4
+      isPPtrCurve: 0
+    - serializedVersion: 2
       path: 0
       attribute: 2851647125
       script: {fileID: 11500000, guid: 876e9251ce7a9c241a8a702b85c47143, type: 3}
@@ -559,13 +566,6 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 4293362177
-      attribute: 4
-      script: {fileID: 0}
-      typeID: 4
-      customType: 4
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1282473481
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -1529,7 +1529,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 87.598
+        value: 84.826
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1557,7 +1557,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.04585333
+        value: -0.04592766
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1575,7 +1575,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: -0.04585333
+        value: -0.04594117
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1594,7 +1594,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 7.880763
+        value: 7.7902827
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1612,7 +1612,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 2
-        value: 7.880763
+        value: 7.775204
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2097,7 +2097,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: bone_13
+    path: bone_9/bone_10
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2107,7 +2107,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: bone_13
+    path: bone_9/bone_10
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2117,7 +2117,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: bone_13
+    path: bone_9/bone_10
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2217,7 +2217,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: bone_9/bone_10
+    path: bone_13
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2227,7 +2227,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: bone_9/bone_10
+    path: bone_13
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2237,7 +2237,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: bone_9/bone_10
+    path: bone_13
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
