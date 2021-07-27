@@ -859,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 4411464549110654574, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
       propertyPath: m_Name
-      value: Equipment_Button (4)
+      value: Equipment_Button5
       objectReference: {fileID: 0}
     - target: {fileID: 6862001676768027786, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
@@ -1284,7 +1284,7 @@ PrefabInstance:
     - target: {fileID: 4411464549110654574, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
       propertyPath: m_Name
-      value: Equipment_Button (2)
+      value: Equipment_Button3
       objectReference: {fileID: 0}
     - target: {fileID: 6862001676768027786, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
@@ -1292,6 +1292,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d782e86b47db3cc469139f2b26940a0f,
         type: 3}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821610097}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Equipment_03Onclick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Equipments, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c52bde87a20c68942afc80ec9bf64f54, type: 3}
 --- !u!224 &225985601 stripped
@@ -1492,7 +1527,7 @@ PrefabInstance:
     - target: {fileID: 4411464549110654574, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
       propertyPath: m_Name
-      value: Equipment_Button
+      value: Equipment_Button1
       objectReference: {fileID: 0}
     - target: {fileID: 6862001676768027786, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
@@ -3061,7 +3096,7 @@ PrefabInstance:
     - target: {fileID: 4411464549110654574, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
       propertyPath: m_Name
-      value: Equipment_Button (3)
+      value: Equipment_Button4
       objectReference: {fileID: 0}
     - target: {fileID: 6862001676768027786, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
@@ -3069,6 +3104,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 7ab1c4029b1d7174bbc03e117977df7b,
         type: 3}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821610097}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Equipment_03Onclick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Equipments, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c52bde87a20c68942afc80ec9bf64f54, type: 3}
 --- !u!224 &510053965 stripped
@@ -5473,7 +5543,7 @@ PrefabInstance:
     - target: {fileID: 4411464549110654574, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
       propertyPath: m_Name
-      value: Equipment_Button (1)
+      value: Equipment_Button2
       objectReference: {fileID: 0}
     - target: {fileID: 6862001676768027786, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
@@ -5481,6 +5551,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8e705b1ab30229446a5b333cb929f116,
         type: 3}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821610097}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Equipment_02Onclick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Equipments, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790189747340533824, guid: c52bde87a20c68942afc80ec9bf64f54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c52bde87a20c68942afc80ec9bf64f54, type: 3}
 --- !u!224 &1127232659 stripped
@@ -8070,7 +8175,7 @@ PrefabInstance:
     - target: {fileID: 4411464549110654574, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}
       propertyPath: m_Name
-      value: Equipment_Button (5)
+      value: Equipment_Button6
       objectReference: {fileID: 0}
     - target: {fileID: 6862001676768027786, guid: c52bde87a20c68942afc80ec9bf64f54,
         type: 3}

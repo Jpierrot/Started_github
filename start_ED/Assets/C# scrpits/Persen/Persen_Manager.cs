@@ -191,7 +191,7 @@ public class Persen_Manager : MonoBehaviour
     /// <summary>
     /// 페르센 추가되는 양을 정의
     /// </summary>
-    static public void Persen_Plus()
+    static public void Persen_Touch()
     {
        persen_volume = persen_create * persen_multiple_level;
        persen_All += persen_volume;
@@ -202,7 +202,7 @@ public class Persen_Manager : MonoBehaviour
     /// 연구원들 페르센 값 넣으면 페르센 전체 값에 넣어줌
     /// </summary>
     /// <param name="persen_all"></param>
-    static public void Persen_Researcher(double persen_all)
+    static public void Persen_Plus(double persen_all)
     {
         persen_All += persen_all;
 
@@ -216,7 +216,7 @@ public class Persen_Manager : MonoBehaviour
     {
         while (true)
         {
-            Persen_Plus();
+            Persen_Touch();
 
             yield return new WaitForSeconds(persen_speed);
         }

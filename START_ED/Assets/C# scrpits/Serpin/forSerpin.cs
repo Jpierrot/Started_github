@@ -33,7 +33,7 @@ public class forSerpin : MonoBehaviour
     private void OnMouseDown() {
         if (just_one_touch)
         {
-            Serpin_Manager.Serpin_Plus();
+            Serpin_Manager.Serpin_Touch();
             Destroy(gameObject, 0.5f);
             fade_out_start = true;
             just_one_touch = false;

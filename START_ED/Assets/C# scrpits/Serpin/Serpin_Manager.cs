@@ -25,12 +25,26 @@ public class Serpin_Manager : MonoBehaviour
     /// 세르핀 레벨업 비용
     /// </summary>
     public Text Serpin_level_purchase;
-     
+
     // 획득 개수
     static private int Serpin;
 
     // 세르핀 생성량
-    static private double Serpin_create = 100d;
+    static private double serpin_create = 100d;
+
+    static public double Serpin_create { get { return serpin_create; } set {serpin_create = value; } }
+
+    /// <summary>
+    /// 레벨당 세르핀 배수
+    /// </summary>
+    static private float serpin_multiple_level = 1;
+
+    static public float Serpin_Multiple_level { get { return serpin_multiple_level; } set { serpin_multiple_level = value; } }
+
+    /// <summary>
+    ///  세르핀 현재 값
+    /// </summary>
+    static private double serpin_volume;
 
     // 세르핀 생성량 표기시
     private double Serpin_create_TEMP = 0d;
@@ -41,15 +55,7 @@ public class Serpin_Manager : MonoBehaviour
     private char serpin_alphabet_ALL = 'A';
 
     private char serpin_purchase = 'A';
-
-
-
-    // 배수
     
-    /// <summary>
-    /// 레벨당 세르핀 배수
-    /// </summary>
-    static private float Serpin_multiple_level = 1;
     // 레벨
     static private int Serpin_level = 1;
     // 세르핀 총량
@@ -64,10 +70,7 @@ public class Serpin_Manager : MonoBehaviour
 
     private double Serpin_purchase_Text_double;
 
-    /// <summary>
-    ///  세르핀 현재 값
-    /// </summary>
-    static private double serpin_volume;
+   
 
     /// <summary>
     /// 세르핀 레벨업 비용
@@ -161,9 +164,8 @@ public class Serpin_Manager : MonoBehaviour
         return Serpin_All;
     }
 
-    static public void Serpin_Plus() {
-        
-        serpin_volume = Serpin_create * Serpin_multiple_level;
+    static public void Serpin_Touch() {
+        serpin_volume =serpin_create * serpin_multiple_level;
         Serpin_All += serpin_volume;
     }
 
@@ -176,12 +178,17 @@ public class Serpin_Manager : MonoBehaviour
             Debug.Log("값이 부족");
     }
 
+    static public void Serpin_Plus(double serpin_all) {
+        Serpin_All += serpin_all;
+
+    }
+
     private void Serpin_LevelUp() {
         
         if (Serpin_All >= volume) {
             
-            Serpin_create_TEMP = Serpin_create;
-            Serpin_create += (Serpin_create * 0.05) + 5;
+            Serpin_create_TEMP = serpin_create;
+            serpin_create += (serpin_create * 0.05) + 5;
             Serpin_level++;
 
             purchase(volume);
@@ -195,11 +202,11 @@ public class Serpin_Manager : MonoBehaviour
 
             if (Serpin_level % 10 == 0)
             {
-                Serpin_multiple_level *= 2f;
+                serpin_multiple_level *= 2f;
             }
 
         }
-        serpin_volume = Serpin_create * Serpin_multiple_level;
+        serpin_volume = serpin_create * serpin_multiple_level;
     }
 
     /// <summary>

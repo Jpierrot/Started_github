@@ -114,7 +114,7 @@ public class Re_A : MonoBehaviour
 
     IEnumerator Researcher_PersenA() {
         while (true) {
-            Persen_Manager.Persen_Researcher(persen_a);
+            Persen_Manager.Persen_Plus(persen_a);
             yield return new WaitForSeconds(persen_speed);
         }
     }
