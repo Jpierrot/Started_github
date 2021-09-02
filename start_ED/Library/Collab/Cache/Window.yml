@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - "Assets/1/\uC9C1\uC6D0\uB2E4\uB9AC2.psd"
+    - "Assets/8bb30742f434af06/\uC9C1\uC6D0\uBA38\uB9AC1.psd"
+    - Assets/Scenes/Test.unity
     - 
-    m_Values: 01
+    m_Values: 00000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

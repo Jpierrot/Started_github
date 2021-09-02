@@ -19,10 +19,29 @@ public class CheckButtonClick : MonoBehaviour
 
     private void Start()
     {
+
         Trait_Button_Text = Content.GetComponentsInChildren<Text>();
         Check_Button = Content.GetComponentsInChildren<Button>();
+
+        for (int i = 0; i < Check_Button.Length; ++i) {
+            int index = i;
+            Check_Button[i].onClick.AddListener(() => OnClickEvent(index));
+        }
+
+        void OnClickEvent(int index) {
+            if (ButtonCount < 3) 
+            {
+                if (Check_Button[index].transform.GetChild(0).gameObject.activeSelf == false)
+                    {
+                    ButtonCount++;
+                    Check_Button[index].transform.GetChild(0).gameObject.SetActive(true);
+                        Trait_text[ButtonCount-1].text += Trait_Button_Text[index].text;
+                    }
+            }
+        }
     }
 
+    /*
     public void CheckButtonOnClick_0()
     {
         if (ButtonCount < 3)
@@ -176,4 +195,5 @@ public class CheckButtonClick : MonoBehaviour
             }
         }
     }
+    */
 }

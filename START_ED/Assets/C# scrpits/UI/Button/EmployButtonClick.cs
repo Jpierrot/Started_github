@@ -25,10 +25,11 @@ public class EmployButtonClick : MonoBehaviour
     private GameObject Trait_text_boxes;
     public Text[] Trait_text;
 
-    private void Start()
+    public void Start()
     {
         Trait_text = Trait_text_boxes.GetComponentsInChildren<Text>();
     }
+       
 
     public void EmployButtonOnClick()
     {
